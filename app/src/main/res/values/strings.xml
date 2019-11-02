@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AttendanceProject</string>
+    <string name="login">Login</string>
+    <string name="total_working_days">Total Working Days</string>
+    <string name="total_present_days">Total Present Days</string>
+    <string name="total_late_marks">Total Late Marks</string>
+    <string name="total_half_days">Total Half Days</string>
+    <string name="total_absent_days">Total Absent Days</string>
+    <string name="attendance_details">Attendance Date</string>
+    <string name="logout">Logout</string>
+    <string name="my_account">My Account</string>
 </resources>

@@ -1,8 +1,10 @@
-package com.honey.attendanceproject
+package com.honey.attendanceproject.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.honey.attendanceproject.R
 import com.honey.attendanceproject.presenter.UserPresenterImpl
 import com.honey.attendanceproject.view.UserView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,7 +21,9 @@ lateinit var userPresenter  : UserPresenterImpl
 //        var email = enter_email.text
 //        var password = enter_password.text
         button_go.setOnClickListener {
-            userPresenter.loginApi()
+//            userPresenter.loginApi()
+            var intent = Intent(this,DashboardActivity::class.java)
+                    startActivity(intent)
         }
     }
 
