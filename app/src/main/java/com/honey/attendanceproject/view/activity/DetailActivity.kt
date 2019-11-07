@@ -68,7 +68,6 @@ class DetailActivity : AppCompatActivity() , DetailView {
         val intent = intent
         if (intent != null) from = intent.getStringExtra("from")
 
-        Log.d("month", month)
         val prefs = getSharedPreferences("TOKEN", Context.MODE_PRIVATE)
         tokenReceived = prefs.getString("token", "").toString()
         progressBar1.visibility = View.VISIBLE
