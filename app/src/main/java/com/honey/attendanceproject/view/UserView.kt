@@ -10,6 +10,6 @@ interface UserView {
 
     fun userNotFound() // show msg after api
     fun userLoggedIn(token : String) // show msg after api
-
+    fun tryAgain() // show msg after api
 
 }

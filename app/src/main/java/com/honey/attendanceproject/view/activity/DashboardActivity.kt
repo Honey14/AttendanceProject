@@ -11,25 +11,25 @@ import android.view.View
 import com.honey.attendanceproject.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
-class DashboardActivity : AppCompatActivity()  , View.OnClickListener{
+class DashboardActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.cardView -> {
                 goToDash("") // all details
             }
-            R.id.cardView1 ->{
+            R.id.cardView1 -> {
 //                goToDash("working")
             }
-            R.id.cardView2 ->{
+            R.id.cardView2 -> {
                 goToDash("PR") // present
             }
-            R.id.cardView3 ->{
+            R.id.cardView3 -> {
                 goToDash("LT") // late
             }
-            R.id.cardView5 ->{
+            R.id.cardView5 -> {
                 goToDash("HD") // half day
             }
-            R.id.cardView6 ->{
+            R.id.cardView6 -> {
                 goToDash("AB") // absent
             }
             else -> {
@@ -37,6 +37,7 @@ class DashboardActivity : AppCompatActivity()  , View.OnClickListener{
             }
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
@@ -50,9 +51,9 @@ class DashboardActivity : AppCompatActivity()  , View.OnClickListener{
         cardView6.setOnClickListener(this)
     }
 
-    private fun goToDash(from : String){
+    private fun goToDash(from: String) {
         val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra("from",from)
+        intent.putExtra("from", from)
         startActivity(intent)
     }
 

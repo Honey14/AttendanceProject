@@ -73,4 +73,9 @@ class DetailActivity : AppCompatActivity() , DetailView {
         progressBar1.visibility = View.VISIBLE
         detailPresenter.getAllAttendanceDetails(tokenReceived, "November", "2019", from)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
