@@ -11,13 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="eAttendance" />
-
+        app:title="Profile" />
+    <!--    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
@@ -25,6 +24,7 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="39dp"
+        android:background="@color/colorPrimary"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView1"
@@ -33,11 +33,10 @@
 
         <ImageView
             android:id="@+id/image_attendance"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/details" />
-
 
         <TextView
             android:id="@+id/text_attendance"
@@ -48,7 +47,7 @@
             android:paddingBottom="5dp"
             android:text="@string/attendance_details"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -66,11 +65,10 @@
 
         <ImageView
             android:id="@+id/image_working"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/working" />
-
 
         <TextView
             android:id="@+id/text_Working"
@@ -81,7 +79,7 @@
             android:paddingBottom="5dp"
             android:text="@string/total_working_days"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -100,7 +98,7 @@
 
         <ImageView
             android:id="@+id/image_Present"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/present" />
@@ -115,7 +113,7 @@
             android:paddingBottom="5dp"
             android:text="@string/total_present_days"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -133,7 +131,7 @@
 
         <ImageView
             android:id="@+id/image_late"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/late" />
@@ -148,7 +146,7 @@
             android:paddingBottom="5dp"
             android:text="@string/total_late_marks"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -166,7 +164,7 @@
 
         <ImageView
             android:id="@+id/image_half"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/half" />
@@ -180,7 +178,7 @@
             android:paddingBottom="5dp"
             android:text="@string/total_half_days"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -196,11 +194,10 @@
 
         <ImageView
             android:id="@+id/image_absent"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/absent" />
-
 
         <TextView
             android:id="@+id/text_absent"
@@ -211,6 +208,6 @@
             android:paddingBottom="5dp"
             android:text="@string/total_absent_days"
             android:textColor="@android:color/black"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

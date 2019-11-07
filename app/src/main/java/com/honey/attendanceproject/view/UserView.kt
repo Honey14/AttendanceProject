@@ -9,7 +9,7 @@ interface UserView {
     fun getPassword() : String // password to pass in api
 
     fun userNotFound() // show msg after api
-    fun userLoggedIn() // show msg after api
+    fun userLoggedIn(token : String) // show msg after api
 
 
 }

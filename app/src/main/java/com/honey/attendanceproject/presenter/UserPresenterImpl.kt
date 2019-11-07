@@ -20,13 +20,11 @@ class UserPresenterImpl : UserPresenter {
     private fun hitLoginApi() {
         // after hitting the call savetoken here and store the token in shared preferences
         saveToken("")
-        view.userLoggedIn()
+        view.userLoggedIn("")
         view.userNotFound()
     }
 
     override fun saveToken(token: String) {
-
-
     }
 
     override fun setView(view: UserView) {

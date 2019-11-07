@@ -1,5 +1,6 @@
 package com.honey.attendanceproject.view.activity
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,9 +22,8 @@ lateinit var userPresenter  : UserPresenterImpl
 //        var email = enter_email.text
 //        var password = enter_password.text
         button_go.setOnClickListener {
-//            userPresenter.loginApi()
-            var intent = Intent(this,DashboardActivity::class.java)
-                    startActivity(intent)
+            userPresenter.loginApi()
+
         }
     }
 
@@ -54,7 +54,16 @@ lateinit var userPresenter  : UserPresenterImpl
         Toast.makeText(this,"User not found",Toast.LENGTH_LONG).show()
     }
 
-    override fun userLoggedIn() {
+    override fun userLoggedIn(token : String) {
         Toast.makeText(this,"Login Success!",Toast.LENGTH_LONG).show()
+        val sharedprefs = getSharedPreferences("TOKEN", Context.MODE_PRIVATE)
+        val editor = sharedprefs.edit()
+        editor.putString("token", token)
+        editor.putBoolean("loggedIn", false) // implement later by getting a splash screen
+        editor.apply()
+
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

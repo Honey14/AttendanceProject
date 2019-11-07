@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.honey.attendanceproject.R
+import com.honey.attendanceproject.model.AttendanceItems
 
-internal class DetailAdapter(private val context: Context) : RecyclerView.Adapter<DetailAdapter.DetailViewHolder>() {
+internal class DetailAdapter(
+    private val context: Context,
+    lists: ArrayList<AttendanceItems>
+) : RecyclerView.Adapter<DetailAdapter.DetailViewHolder>() {
 
 
     override fun onBindViewHolder(holder: DetailViewHolder, position: Int) {
